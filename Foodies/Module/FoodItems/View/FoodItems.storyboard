@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qz2-bL-JM2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Items View Controller-->
+        <scene sceneID="gLn-VT-EHd">
+            <objects>
+                <viewController storyboardIdentifier="FoodItems" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qz2-bL-JM2" customClass="FoodItemsViewController" customModule="Foodies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="shj-T5-HCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b89-fJ-g5C">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="73u-Ds-Z6v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="73u-Ds-Z6v" firstAttribute="bottom" secondItem="b89-fJ-g5C" secondAttribute="bottom" id="Adi-7J-11V"/>
+                            <constraint firstItem="b89-fJ-g5C" firstAttribute="leading" secondItem="73u-Ds-Z6v" secondAttribute="leading" id="VL0-Zo-zpe"/>
+                            <constraint firstItem="b89-fJ-g5C" firstAttribute="top" secondItem="73u-Ds-Z6v" secondAttribute="top" id="YTn-6L-gXt"/>
+                            <constraint firstItem="73u-Ds-Z6v" firstAttribute="trailing" secondItem="b89-fJ-g5C" secondAttribute="trailing" id="sME-OK-7Qk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O22-Mx-swF"/>
+                    <connections>
+                        <outlet property="tableView" destination="b89-fJ-g5C" id="Mqc-Yp-3pH"/>
+                        <segue destination="Ymb-Kh-7hm" kind="show" identifier="FoodItemDetailSegue" id="Hpw-ih-sHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pod-Cg-a6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="87.723214285714278"/>
+        </scene>
+        <!--FoodItemDetail-->
+        <scene sceneID="4t1-x4-DDZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FoodItemDetail" id="Ymb-Kh-7hm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pNX-xw-QLo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNA-cy-Fmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678.985507246377" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
