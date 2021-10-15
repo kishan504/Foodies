@@ -64,7 +64,6 @@ extension FoodItemsViewController: UITableViewDataSource, UITableViewDelegate {
         let section = section
         var indexPaths = [IndexPath]()
         for row in foodList[section].foodItemList.indices {
-            print(0,row)
             let indexPath = IndexPath(row: row, section: section)
             indexPaths.append(indexPath)
         }
@@ -74,5 +73,6 @@ extension FoodItemsViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             tableView.insertRows(at: indexPaths, with: .fade)
         }
+        tableView.reloadData()
     }
 }
